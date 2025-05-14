@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def index(request):
-    return HttpResponse('<h1>Alura Django</h1> <p>Galeria de Imagens</p>')
+    return render(request, 'index.html')
