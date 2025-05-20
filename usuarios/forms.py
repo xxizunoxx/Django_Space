@@ -6,20 +6,23 @@ class LoginForms(forms.Form):
     password = forms.CharField(label='Senha', required=True, max_length=70, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: 12345678'}))
 
 class CadastroForms(forms.Form):
-    nome_cadastro = forms.CharField(label='Usúario', required=True, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: João_Silva'}))
+
+    nome_cadastro1 = forms.CharField(label='Nome', required=True, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: João'}))
+    nome_cadastro2 = forms.CharField(label='Sobrenome', required=True, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: Silva'}))
+    nome_user = forms.CharField(label='Usúario', required=True, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: João_Silva'}))
     email = forms.EmailField(label='E-mail', required=True, max_length=100, widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Ex.:exemplo@exemplo.com.br'}))
     password1 = forms.CharField(label='Senha', required=True, max_length=70, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: 12345678'}))
     password2 = forms.CharField(label='Confirmação de Senha', required=True, max_length=70, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Ex.: Digite novamente a senha'}))
 
-    def clean_nome_cadastro(self):
-        nome = self.cleaned_data.get('nome_cadastro')
+    def clean_nome_user(self):
+        user = self.cleaned_data.get('nome_user')
 
-        if nome:
-            nome = nome.strip()
-            if ' ' in nome:
-                raise forms.ValidationError('O nome não pode conter espaços em branco.')
+        if user:
+            user = user.strip()
+            if ' ' in user:
+                raise forms.ValidationError('O usúario não pode conter espaços em branco.')
             else:
-                return nome
+                return user
         
     
     def clean_password2(self):
