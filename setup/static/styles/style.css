@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(#00050a,#360404,#200101);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -62,10 +62,13 @@ table {
 
 .banner__imagem {
     width: 100%;
+    border-radius: 8px;
+    border: 1px solid black;
+
 }
 
 .banner__titulo {
-    color: #FFFFFF;
+    color: #c0adad;
     font-size: 40px;
     width: 350px;
     line-height: 50px;
@@ -84,7 +87,7 @@ table {
 .cabecalho__busca {
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #661212,#580202);
     display: flex;
     height: auto;
     justify-content: space-between;
@@ -93,28 +96,47 @@ table {
 }
 
 .busca__fundo {
-    align-items: center;
-    background-color: #041A37;
-    border-radius: 8px;
     display: flex;
-    margin: 0 auto;
-    width: 100%;
+    align-items: center;
+    background-color: #370404;
+    border-radius: 8px;
+    padding: 5px;
+    width: fit-content;
+}
+
+form.busca {
+    display: flex;
+    align-items: center; /* ESSENCIAL PARA ALINHAR verticalmente */
+    gap: 8px; /* espaçamento entre input e botão */
 }
 
 .busca__input {
-    align-items: center;
     background-color: transparent;
     border: none;
+    outline: none;
     font-size: 1rem;
-    height: 24px;
     padding: 10px;
-    width: 500px;
+    width: 400px;
+    color: white;
+}
+
+.busca_color {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .busca__icone {
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .cards {
@@ -122,7 +144,7 @@ table {
 }
 
 .cards__titulo {
-    color: #7B78E5;
+    color: #c0adad;
     font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
@@ -138,7 +160,8 @@ table {
 .card {
     border-radius: 10px;
     box-shadow: 0px 10px 10px #00000050;
-    color: #FFFFFF;
+    color: #c0adad;
+    border: 1px solid black;
     margin-bottom: 1.5rem;
     position: relative;
     width: 450px;
@@ -226,14 +249,14 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #FFFFFF;
+    color: #c0adad;
     margin-top: 0.5rem;
 }
 
 .imagem__titulo {
     font-weight: bold;
     line-height: 2rem;
-    color: #FFFFFF;
+    color: #c0adad;
 }
 
 .imagem__texto {
@@ -261,13 +284,13 @@ table {
     display: flex;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    color: #D9D9D9;
+    color: #c0adad;
     font-size: 24px;
 }
 
 .menu-lateral__navegacao a:first-child {
     font-weight: bold;
-    color: #7B78E5;
+    color: #530a0a;
 }
 
 .menu-lateral__navegacao img {
@@ -286,7 +309,7 @@ table {
 
 .populares__titulo {
     font-size: 2rem;
-    color: #7B78E5;
+    color: #c0adad;
     line-height: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -304,7 +327,7 @@ table {
     width: 100%;
     height: 50px;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #c0adad,#330303);
     padding: 2px;
     box-sizing: border-box;
 }
@@ -315,7 +338,7 @@ table {
     align-items: center;
     font-size: 20px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #c0adad;
     background-color: #082D5C;
     width: 100%;
     height: 100%;
@@ -333,13 +356,13 @@ table {
 }
 
 .rodape {
-    background-color: #04244F;
+    background-color: #180101;
     width: 100%;
     padding: 1.5rem 3rem;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    color: #FFFFFF;
+    color: #c0adad;
 }
 
 .rodape__icones {
@@ -356,7 +379,7 @@ table {
     padding: 1.5rem 0;
     display: flex;
     align-items: center;
-    color: #D9D9D9;
+    color: #c0adad;
     font-size: 1.3rem;
 }
 
@@ -379,7 +402,7 @@ table {
 }
 
 .tags__tag:hover {
-    border: 2px solid #7B78E5;
+    border: 2px solid #c0adad;
     cursor: pointer;
 }
 
